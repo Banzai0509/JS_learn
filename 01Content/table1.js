@@ -9,3 +9,5 @@ const num = boardTr.length;
 //console.log(num);
 
 boardCount.textContent = `총 ${num} 건`;
+
+//testttttttttttttttttt
