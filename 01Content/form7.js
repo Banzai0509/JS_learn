@@ -1,23 +1,21 @@
 const email = () => {
-  const emailSelect = document.querySelectorAll(".email-select option");
+  const emailSelect = document.querySelector(".email-select");
   const domainInput = document.querySelector(".domain");
 
-  //   console.log(emailSelect);
-  //   console.log(domainInput);
-
-  emailSelect.forEach((option, optionIndex) => {
-    option.addEventListener("click", () => {
-      const isValue = optionIndex.value;
-      console.log(`선택된 점수는 ${isValue}입니다.`);
-    });
+  emailSelect.addEventListener("change", (e) => {
+    if (emailSelect.value === "") {
+      domainInput.removeAttribute("readonly");
+      domainInput.value = null;
+    } else {
+      domainInput.value = e.target.value;
+    }
   });
 };
 
 email();
 
-// emailSelect.forEach((option, optionIndex) => {
-//     option.addEventListener("click", () => {
-//       const isValue = option.value;
-//       console.log(`선택된 점수는 ${isValue}입니다.`);
-//     });
-//   });
+// else {
+//   domainInput.value = e.target.value;
+// }
+
+// console.log(emailSelect.value);
