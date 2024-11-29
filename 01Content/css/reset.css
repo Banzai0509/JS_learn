@@ -31,14 +31,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-.board-title {
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.board-count {
-  text-align: right;
-}

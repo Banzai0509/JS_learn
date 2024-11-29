@@ -331,15 +331,90 @@ const toggleDays = () => {
   buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const parent = e.currentTarget.parentElement;
-      console.log(parent);
+      const children = e.currentTarget.children;
+      console.log(children); //유사배열로 나타남. html리스트로. n번째로 탐색
+
       parent.classList.toggle("active");
+
+      if (children[1].hasAttribute("style")) {
+        children[1].removeAttribute("style");
+      } else {
+        children[1].style.color = "yellow";
+      }
     });
   });
 };
 toggleDays();
 
+//closest : 주어진 CSS 선택자와 일치하는 가장 가까운(closest) 상위 조상 요소를 찾아서 반환하는데 요소 자신도 포함.
+// https://codingeverybody.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-closest-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%EB%B2%95/
+
+const toggleDepth = () => {
+  const buttons = document.querySelectorAll(".routine-list button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      // console.log(e.currentTarget);
+      const depthButton = e.currentTarget;
+      if (depthButton.closest("div")) {
+        depthButton.closest("li").style.border = "5px solid red";
+      }
+    });
+  });
+};
+toggleDepth();
+
+const checkDepth = () => {
+  const items = document.querySelectorAll(".routine-list > li");
+
+  items.forEach((item) => {
+    const depth = item.querySelector(".detail-list");
+    console.log(item.contains(depth));
+    if (!item.contains(depth)) {
+      const button = item.querySelector("button");
+      button.setAttribute("role", "link");
+      button.addEventListener("click", () => {
+        window.location.href = "#page";
+      });
+    }
+  });
+};
+checkDepth();
+
 /* -------------------------------------------------------------------------- */
 /*                                   DOM 삽입                                  */
 /* -------------------------------------------------------------------------- */
+
+// insertAdjacentHTML() : 지정된 요소의 인접한(Adjacent) 특정 위치에 HTML 코드를 문자열로 삽입(insert)하여 새로운 DOM 요소를 생성합니다.
+// createElement는 한번밖에 못 씀. 일회용
+const insertDOM = () => {
+  const ul = document.querySelector(".routine-list");
+
+  // ul.insertAdjacentHTML(위치, HTML코드)
+  ul.insertAdjacentHTML("beforebegin", `<h3>제목입니다</h3> <span>서브텍스트입니다</span>`);
+  ul.insertAdjacentHTML("afterend", "<h3>다음 형제로 삽입합니다.</h3>");
+
+  const li = document.createElement("li");
+  li.textContent = "첫번째 자식입니다.";
+  li.classList.add("fist");
+  ul.prepend(li);
+
+  const liLast = document.createElement("li");
+  liLast.textContent = "마지막 자식입니다.";
+  liLast.classList.add("last");
+  ul.append(liLast);
+
+  // ul.remove(); ul삭제 위에서 코드로 만든건 지워지지 않음
+
+  // innerHTML : HTML 요소의 내부 HTML 콘텐츠를 가져오거나 설정합니다.
+  // 아예 지워지고 다시 생성
+  // ul.innerHTML = "<li>새롭게 생성된 DOM</li>";
+  // ul.innerHTML = `
+  // <li>새롭게 생성된 DOM1</li>
+  // <li>새롭게 생성된 DOM2</li>
+  // <li>새롭게 생성된 DOM3</li>
+  // <li>새롭게 생성된 DOM4</li>
+  // `;
+};
+insertDOM();
 
 // html의 텍스트 제어 기능이 돔

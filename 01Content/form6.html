@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>폼6</title>
-    <link rel="stylesheet" href="./css/reset.css" />
     <script src="./form6.js" defer></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/form6.css" />
   </head>
 
   <body>
@@ -14,8 +15,10 @@
         <fieldset>
           <legend>주거적용</legend>
           <div class="selected"></div>
-          <h1>주거선택</h1>
-          <table width="100%" border="1">
+          <table class="table-type1">
+            <caption>
+              주거선택
+            </caption>
             <colgroup>
               <col style="width: 120px" />
               <col />
@@ -26,7 +29,7 @@
                 <td>
                   <div>
                     <input type="checkbox" id="chk5_1" value="아파트" /><label for="chk5_1">아파트</label>
-                    <input type="checkbox" id="chk5_2" value="연립/빌라" checked /><label for="chk5_2">연립/빌라</label>
+                    <input type="checkbox" id="chk5_2" value="연립/빌라" /><label for="chk5_2">연립/빌라</label>
                     <input type="checkbox" id="chk5_3" value="단독주택" /><label for="chk5_3">단독주택</label>
                   </div>
                 </td>
@@ -46,96 +49,46 @@
                 <th>비용</th>
                 <td>
                   <div>
-                    <input type="checkbox" id="chk7_1" /><label for="chk7_1">500만원 미만</label> <input type="checkbox" id="chk7_2" /><label
-                      for="chk7_2"
-                      >500~1000만원</label
-                    >
-                    <input type="checkbox" id="chk7_3" /><label for="chk7_3">1000~2000만원</label> <input type="checkbox" id="chk7_4" /><label
-                      for="chk7_4"
-                      >2000~3000만원</label
-                    >
-                    <input type="checkbox" id="chk7_5" /><label for="chk7_5">3000~4000만원</label> <input type="checkbox" id="chk7_6" /><label
-                      for="chk7_6"
-                      >4000~5000만원</label
-                    >
+                    <input type="checkbox" id="chk7_1" value="500만원 미만" /><label for="chk7_1">500만원 미만</label>
+                    <input type="checkbox" id="chk7_2" value="500~1000만원" /><label for="chk7_2">500~1000만원</label>
+                    <input type="checkbox" id="chk7_3" value="1000~2000만원" /><label for="chk7_3">1000~2000만원</label>
+                    <input type="checkbox" id="chk7_4" value="2000~3000만원" /><label for="chk7_4">2000~3000만원</label>
+                    <input type="checkbox" id="chk7_5" value="3000~4000만원" /><label for="chk7_5">3000~4000만원</label>
+                    <input type="checkbox" id="chk7_6" value="4000~5000만원" /><label for="chk7_6">4000~5000만원</label>
                   </div>
                 </td>
               </tr>
               <tr>
                 <th>스타일</th>
                 <td>
-                  <input type="checkbox" id="chk8_1" /><label for="chk8_1">모던</label> <input type="checkbox" id="chk8_2" /><label for="chk8_2"
-                    >클래식</label
+                  <input type="checkbox" id="chk8_1" value="모던" /><label for="chk8_1">모던</label>
+                  <input type="checkbox" id="chk8_2" value="클래식" /><label for="chk8_2">클래식</label>
+                  <input type="checkbox" id="chk8_3" value="내추럴" /><label for="chk8_3">내추럴</label> <input type="checkbox" id="chk8_4" /
+                  value="화이트"><label for="chk8_4">화이트</label> <input type="checkbox" id="chk8_5" value="모노톤" /><label for="chk8_5"
+                    >모노톤</label
                   >
-                  <input type="checkbox" id="chk8_3" /><label for="chk8_3">내추럴</label> <input type="checkbox" id="chk8_4" checked /><label
-                    for="chk8_4"
-                    >화이트</label
-                  >
-                  <input type="checkbox" id="chk8_5" /><label for="chk8_5">모노톤</label> <input type="checkbox" id="chk8_6" /><label for="chk8_6"
-                    >파스텔</label
-                  >
-                  <input type="checkbox" id="chk8_7" /><label for="chk8_7">로맨틱</label> <input type="checkbox" id="chk8_8" /><label for="chk8_8"
-                    >유니크</label
-                  >
+                  <input type="checkbox" id="chk8_6" value="파스텔" /><label for="chk8_6">파스텔</label>
+                  <input type="checkbox" id="chk8_7" value="로맨틱" /><label for="chk8_7">로맨틱</label>
+                  <input type="checkbox" id="chk8_8" value="유니크" /><label for="chk8_8">유니크</label>
                 </td>
               </tr>
               <tr>
                 <th>평형대</th>
                 <td>
-                  <input type="checkbox" id="chk9_1" /><label for="chk9_1">20평형</label> <input type="checkbox" id="chk9_2" /><label for="chk9_2"
-                    >30평형</label
-                  >
-                  <input type="checkbox" id="chk9_3" checked /><label for="chk9_3">40평형</label> <input type="checkbox" id="chk9_4" /><label
-                    for="chk9_4"
-                    >50평형이상</label
-                  >
+                  <input type="checkbox" id="chk9_1" value="20평형" /><label for="chk9_1">20평형</label>
+                  <input type="checkbox" id="chk9_2" value="30평형" /><label for="chk9_2">30평형</label>
+                  <input type="checkbox" id="chk9_3" value="40평형" /><label for="chk9_3">40평형</label>
+                  <input type="checkbox" id="chk9_4" value="50평형이상" /><label for="chk9_4">50평형이상</label>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="button-set">
-            <button type="submit">선택 적용하기</button>
+          <div class="btn-group">
+            <button type="submit" class="btn-submit">선택 적용하기</button>
             <button type="reset" class="btn-reset">초기화</button>
           </div>
         </fieldset>
       </form>
     </div>
-    <style>
-      .selected {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-
-        span {
-          padding: 2px;
-          font-size: 14px;
-          color: gray;
-
-          &::before {
-            content: "#";
-            color: darkgrey;
-          }
-        }
-      }
-      table {
-        margin: 0 0 30px 0;
-      }
-      td {
-        padding: 7px 10px;
-      }
-      h1 {
-        margin: 0 0 20px 0;
-        font-size: 30px;
-        font-weight: bold;
-        text-align: center;
-      }
-      .button-set {
-        text-align: center;
-      }
-      button {
-        padding: 5px 10px;
-        font-size: 18px;
-      }
-    </style>
   </body>
 </html>
