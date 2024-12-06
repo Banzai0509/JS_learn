@@ -1,15 +1,15 @@
-const dialog = () => {
-  const openPop = document.querySelector(".btn-open");
-  const closePop = document.querySelector(".btn-close");
-  const dialog = document.querySelector(".popup");
+// const dialog = () => {
+//   const openPop = document.querySelector(".btn-open");
+//   const closePop = document.querySelector(".btn-close");
+//   const dialog = document.querySelector(".popup");
 
-  openPop.addEventListener("click", () => {
-    dialog.showModal();
-  });
+//   openPop.addEventListener("click", () => {
+//     dialog.showModal();
+//   });
 
-  closePop.addEventListener("click", () => {
-    dialog.close();
-  });
-};
+//   closePop.addEventListener("click", () => {
+//     dialog.close();
+//   });
+// };
 
-dialog();
+// dialog();

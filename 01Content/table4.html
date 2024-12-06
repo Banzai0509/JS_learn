@@ -6,19 +6,20 @@
     <title>표4</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <script src="./table4.js" defer></script>
+    <script type="module" src="./js/global.js"></script>
   </head>
 
   <body>
-    <button class="btn-open">팝업열기</button>
-    <dialog class="popup">
-      팝업내용
-      <button class="btn-close">팝업닫기</button>
+    <button class="btn-open" data-dialog-open="popup1">팝업열기1</button>
+    <dialog class="popup" data-dialog="popup1">
+      팝업1내용<br /><br />
+      <button class="btn-close" data-dialog-close="popup1">팝업닫기1</button>
     </dialog>
 
-    <!-- <button class="btn-open" data-dialog-open="popup">팝업열기</button>
-    <dialog class="popup" data-dialog="popup">
-      팝업내용
-      <button class="btn-close" data-dialog-close="popup">팝업닫기</button>
-    </dialog> -->
+    <button class="btn-open" data-dialog-open="popup2">팝업열기2</button>
+    <dialog class="popup" data-dialog="popup2">
+      팝업2내용<br /><br />
+      <button class="btn-close" data-dialog-close="popup2">팝업닫기2</button>
+    </dialog>
   </body>
 </html>

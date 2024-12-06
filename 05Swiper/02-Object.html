@@ -7,13 +7,52 @@
     <script type="module" src="./02-Object.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-      .swiper {
+      .slider1 {
         height: 50vh;
+
+        .swiper-slide {
+          background: lightseagreen;
+        }
+
+        .prev {
+          opacity: 0.2;
+        }
+        /* .swiper-slide-next {
+          opacity: 0.2;
+        } */
+        .active {
+          background-color: green;
+        }
+      }
+      .slider2 {
+        height: 50vh;
+
+        .swiper-slide {
+          background: lightcyan;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="swiper">
+    <div class="swiper slider1">
+      <!--swiper는 절대 건들이면 안되고 추가 클래스로-->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="swiper slider2">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
